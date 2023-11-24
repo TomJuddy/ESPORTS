@@ -1,0 +1,49 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<%- include('../partials/CSS') %>
+
+
+<style>
+* { 
+	font-family:serif droid; 
+}
+
+* {
+	color:gray ;
+}
+
+
+</style>
+	
+	<body>
+		
+		<br> 
+		
+<div class="container">
+<br></br>
+<h1>Add A Player</h1>
+<div class="col-5">
+	<div class="card">
+		<div class="card-body">
+			<h6 class="card-title">
+				<form action='http://localhost:3000/players' method='post'>
+					<input placeholder="Name" type='text' name='name'>
+					<br></br>
+					<input placeholder="Email" type='text' name='email'>
+					<br></br>
+					<button style="text-align: center ;" 
+					class="btn btn-outline-success" type='submit'>Add Player</button>
+				</form>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+
+
+
+	</body>
+
+<%- include('../partials/footer') %>

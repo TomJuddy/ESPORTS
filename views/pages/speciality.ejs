@@ -1,0 +1,51 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<%- include('../partials/CSS') %>
+
+<style>
+    * { 
+        font-family:serif droid; 
+    }
+    
+    * {
+        color:gray ;
+    }
+    
+</style>
+
+
+<body>
+    <br>
+
+
+<div class="container">
+<h1><%= playergameArray.PlayerName %> Games </h1>
+<div class="col-5">
+			
+    <div class="card">
+        
+        <div class="card-body">
+            <h1 class="card-title">
+                
+            </h1>
+            <h5>	
+                <% playergameArray.forEach((speciality)=> { %>  
+                    <li><%= speciality.GameName %></li>
+                <% }) %>
+            </h5>
+                <a href="/editgames/<%= playerId %>"><button class="btn btn-outline-dark" class type='button'>Add/Remove Playable Games</button></a>
+        </div>
+        
+    </div>
+    <br></br>
+
+
+</div>
+
+</div>
+
+</body>
+
+
+
+<%- include('../partials/footer') %>

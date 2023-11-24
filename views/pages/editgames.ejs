@@ -1,0 +1,71 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<%- include('../partials/CSS') %>
+<style>
+    * { 
+        font-family:serif droid; 
+    }
+    
+    * {
+        color:gray ;
+    }
+    
+</style>
+
+<body>
+	
+	<br>  
+
+<div class="container">
+	<div class="col-5">
+		<div class="card">
+			<div class="card-body">
+				<%= playergameArray.playerName %>
+			<h1 class="card-title">
+
+					
+
+			
+			</h1>
+			<h3>Reselect or change Games</h3>
+
+			<form action="http://localhost:3000/speciality/<%= playerId %>" method ="post">
+
+				<% playergameArray.forEach((player)=> { %>
+
+					<div class="form-check">
+
+						<input name="game_id" class="form-check-input" type="checkbox" value="<%= player.game_id %>">
+
+						<label class="form-check-label" for="flexCheckDefault">
+
+						<%= player.name %>
+
+						</label>
+
+					</div>
+
+				<% }) %>  
+<br>
+				<button type="submit" class="btn btn-success">Edit the games they play</button>
+
+				</form>
+<br>
+			</h1>
+			<h5>	
+<!-- buttons	 -->
+			</h5>
+			
+			</div>
+		</div>	
+<br></br>
+	</div>
+</div>
+	
+
+
+</body>
+
+
+
+<%- include('../partials/footer') %>

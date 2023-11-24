@@ -1,0 +1,55 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<%- include('../partials/CSS') %>
+
+
+<style>
+* { 
+	font-family:serif droid; 
+}
+
+* {
+	color:gray ;
+}
+
+
+</style>
+	
+	<body>
+		<br>
+		
+		
+	<div class="container">
+<br></br>
+		<h1>Add A Game</h1>
+
+
+		<div class="col-5">
+			<div class="card">
+				<div class="card-body">
+					<h6 class="card-title">
+					<form action='http://localhost:3000/games' method='post'>
+						<input placeholder="Name" type='text' name='name'>
+						<br></br>
+						<input placeholder="Duration (Numbers only)" type='text' name='duration'>
+						<br></br>
+						<input placeholder="Team size (Numbers only)" type='text' name='team_size'>
+						<br></br>
+						<button style="text-align: center ;" 
+						class="btn btn-outline-success" type='submit'>Add Game</button>
+					</form>
+
+
+				</div>
+			</div>
+		</div>
+</div>
+
+
+
+
+
+
+	</body>
+
+<%- include('../partials/footer') %>

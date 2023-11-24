@@ -1,0 +1,54 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<%- include('../partials/CSS') %>
+<style>
+    * { 
+        font-family:serif droid; 
+    }
+    
+    * {
+        color:gray ;
+    }
+    
+    
+    </style>
+<body>
+    <br>
+
+
+<div class="container">
+    
+    <h1>Edit <%= player.name %>'s Profile</h1>
+    
+        <div class="col-5"> Player Id <%= player.player_id %>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"> 
+                        <form action='http://localhost:3000/player/edit/<%= player.player_id %>' method='post'>
+                            <h6>Name</h6>
+                            <input value="<%= player.name %>" type='text' name='name'>
+                            <h6>Email</h6>
+                            <input value="<%= player.email %>" type='text' name='email'>
+                            <br></br>
+                            <button style="text-align: center ;" 
+                            class="btn btn-outline-success" type='submit'>Change</button>
+                        </form>
+                        <br>
+                        <form action='http://localhost:3000/player/delete/<%= player.player_id %>' method='post'>
+            <button type="submit" class="btn btn-outline-danger">Delete</button>
+            </form>
+                    </h5>
+                </div>
+                
+            </div>
+           <p></p>
+            
+        </div>
+        
+  
+</div>
+
+
+</body>
+
+<%- include('../partials/footer') %>

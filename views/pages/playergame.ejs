@@ -1,0 +1,29 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<%- include('../partials/CSS') %>
+
+
+<style>
+* { 
+	font-family:serif droid; 
+}
+
+* {
+	color:gray ;
+}
+
+
+</style>
+	
+	<body>
+		<br>
+
+		<div class="container">
+			<h1>The People that play this game are.....</h1>
+		<% playergameArray.forEach((speciality)=> { %>  
+			<li><%= speciality.PlayerName %></li>
+		<% }) %>
+		</div>
+	</body>
+
+<%- include('../partials/footer') %>

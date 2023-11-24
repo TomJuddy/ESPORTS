@@ -1,0 +1,64 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<%- include('../partials/CSS') %>
+
+
+<style>
+	* { 
+		font-family:serif droid; 
+	}
+	
+	* {
+		color:gray ;
+	}
+
+	
+	
+	
+	
+	</style>	
+	<body>
+		
+		<br>   
+	<div class="container">
+	<h1>All Players</h1>
+<br>
+	<a href="/addplayer"><button class="btn btn-success" class type='button'>Add Player</button></a>
+	
+	<br></br>
+	<div class="row">
+		
+	<% playerArray.forEach((player)=> { %>
+		
+		<div class="col-5">
+			
+			<div class="card">
+				
+				<div class="card-body">
+					
+					<h3 class="card-title">
+						<%= player.name %> 
+						<br>
+					</h3>
+					<h5>	
+					<%= player.email %> 
+					</h5>	
+					<a  href="/player/<%= player.player_id %>"><button type="button" class="btn btn-outline-secondary">Edit Player</button></a> 
+					<a  href="/speciality/<%= player.player_id %>"><button type="button" class="btn btn-outline-secondary">View Games</button></a> 
+				
+				</div>
+				
+			</div>
+			
+			<br>
+		</div>	
+		
+	<% }) %>  
+	</div>
+	</div>
+	
+	<br>
+	
+	</body>
+
+<%- include('../partials/footer') %>
